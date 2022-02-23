@@ -1,0 +1,46 @@
+.image-slider-container {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    /* border: 1px solid red; */
+}
+
+.image-slider-container .tokari-info {
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 600px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+}
+
+.image-slider-container .tokari-info h1 {
+    font-size: 100px;
+}
+
+.image-slider-container .tokari-info p {
+    font-size: 20px;
+    margin-left: 20px;
+    color: gray;
+    line-height: 1.4;
+}
+
+.image-slider-container .truck-img img {
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    z-index: 2;
+    animation: 1.5s ease-in-out slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
