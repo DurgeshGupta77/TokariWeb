@@ -1,0 +1,161 @@
+.about-us-section {
+    margin-top: 50px;
+}
+
+.about-us-section .main-title {
+    text-align: center;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.about-us-section .main-p {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.about-div {
+    background-color: rgba(97, 221, 97, 0.2);
+    /* height: 300px; */
+    padding: 80px 220px;
+    margin-bottom: 80px;
+}
+
+.about-div h1 {
+    font-size: 40px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    margin-bottom: 20px;
+}
+
+.about-div p {
+    font-size: 20px;
+    line-height: 2;
+    color: gray;
+}
+
+.opportunities {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.opportunities .problems, .opportunities .solutions {
+    width: 450px;
+    /* border: 1px solid red; */
+    margin-right: 30px;
+    border-radius: 10px;
+    padding: 50px 40px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.opportunities .problems {
+    background-color: rgb(89, 194, 89);
+}
+
+.opportunities .solutions {
+    border: 1px solid gray;
+    box-shadow: 10px 10px 8px 10px #888888;
+}
+
+.opportunities .problems h1, .opportunities .solutions h1 {
+    margin-bottom: 20px;
+}
+
+.opportunities .problems h1 {
+    color: aliceblue;
+}
+
+.opportunities .problems ul, .opportunities .solutions ul {
+    margin-bottom: 20px;
+}
+
+
+.opportunities .problems ul li p, .opportunities .solutions ul li p {
+    line-height: 1.5;
+}
+
+.opportunities .problems ul li p {
+    color: aliceblue;
+}
+
+.opportunities .problems .icon-container, .opportunities .solutions .icon-container {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    /* padding: 30px 30px; */
+    margin-bottom: 20px;
+}
+
+.opportunities .problems .icon-container {
+    background-color: white;
+}
+
+.opportunities .solutions .icon-container {
+    background-color: green;
+}
+
+.opportunities .problems .icon-container .icon, .opportunities .solutions .icon-container .icon {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+.opportunities .problems .icon-container .icon {
+    color: green;
+}
+
+.opportunities .solutions .icon-container .icon {
+    color: white;
+}
+
+.opportunities .problems.change {
+    transform: translateY(-10%);
+}
+
+.opportunities .solutions.change {
+    transform: translateY(-10%);
+    background-color: rgb(89, 194, 89);
+    border: none;
+}
+
+.opportunities .solutions.change h1 {
+    color: aliceblue;
+}
+
+.opportunities .solutions.change p {
+    color: aliceblue;
+}
+
+.why-us-container .title {
+    font-size: 38px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.why-us-container .title-p {
+    padding: 5px 350px;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+    margin-top: 10px;
+}
+
+.why-us-container .design-img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.why-us-container .design-img-container img {
+    width: 30%;
+}
+
+.basket-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}

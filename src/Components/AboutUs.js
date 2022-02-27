@@ -12,6 +12,7 @@ import '../styles/AboutUs.css';
 //Animation on Scroll
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
 
@@ -24,7 +25,10 @@ const AboutUs = () => {
             <div className="info-container">
                 <h1>About Us</h1>
                 <p>Ninjacart is India's largest Fresh Produce Supply Chain Company. We are pioneers in solving one of the toughest supply chain problems of the world by leveraging innovative technology. We source fresh produce from farmers and deliver them to businesses within 12 hours.</p>
-                <button>Know more</button>
+                <button>
+                    <Link to="/about">Know more</Link>
+                </button>
+                {/* <Link to="/about">Know More</Link> */}
             </div>
             <div className="lines-container">
                 <h1>Tokari</h1>

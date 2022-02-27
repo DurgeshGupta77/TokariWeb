@@ -1,0 +1,24 @@
+.benefits-container {
+    margin-top: 100px;
+    width: 300px;
+}
+
+.benefits-container .benefits1, .benefits-container .benefits2, .benefits-container .benefits3 {
+    margin-bottom: 50px;
+}
+
+.benefits-container .benefits1 .title-grp, .benefits-container .benefits2 .title-grp, .benefits-container .benefits3 .title-grp {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.benefits-container .benefits1 .title-grp h1, .benefits-container .benefits2 .title-grp h1, .benefits-container .benefits3 .title-grp h1 {
+    margin-left: 10px;
+    color: green;
+}
+
+.benefits-container .benefits1 p, .benefits-container .benefits2 p, .benefits-container .benefits3 p {
+    color: gray;
+    line-height: 1.5;
+}

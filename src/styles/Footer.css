@@ -10,6 +10,10 @@ footer {
     background-image: url(../assets/footer_cover.png);
     object-fit: cover;
     height: 500px;
+    /* border: 1px solid red; */
+    /* position: fixed;
+    bottom: 0;
+    width: 100vw; */
 }
 
 .footer-company, .footer-contact, .footer-social {
