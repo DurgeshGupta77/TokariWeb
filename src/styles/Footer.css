@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
 /* footer {
     background-color: rebeccapurple;
 } */
@@ -29,7 +30,7 @@ footer .footer-company ul {
 
 .footer-company h1 {
     margin-bottom: 10px;
-    font-family: Helvetica;
+    font-family: 'Chivo', sans-serif;
 }
 
 footer .footer-company ul li a {
@@ -37,7 +38,7 @@ footer .footer-company ul li a {
     color: rgb(149, 150, 148);
 
     font-size: 20px;
-    font-family: Helvetica;
+    font-family: 'Chivo', sans-serif;
 }
 
 .footer-social {
@@ -59,13 +60,13 @@ footer .footer-company ul li a {
     justify-content: center;
     margin-bottom: 15px;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Chivo', sans-serif;
 }
 
 .footer-contact h1 {
     margin-bottom: 10px;
     /* text-align: center; */
-    font-family: sans-serif;
+    font-family: 'Chivo', sans-serif;
 }
 
 .footer-contact ul {

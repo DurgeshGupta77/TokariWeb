@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
 .about-container {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    /* padding: 30px 200px; */
+    padding: 0px 30px;
     /* margin: 20% 0px; */
     margin: 200px 50px 50px 50px;
     border-radius: 50px;
     /* margin-bottom: 30px; */
     /* border: 1px solid rebeccapurple; */
-    background-color: #c2ffd2;
+    background-color: rgba(102, 187, 106, 0.5);
     width: fit-content;
     height: 600px;
+    box-shadow: 4px 4px 15px -2px gray;
 }
 
 .about-container .info-container {
@@ -27,7 +30,7 @@
 }
 
 .about-container .info-container p {
-    color: gray;
+    color: black;
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -37,7 +40,7 @@
     padding: 15px 30px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(72, 185, 72);
+    background-color: rgb(102, 187, 106);
     cursor: pointer;
     /* transition: background-color 1s; */
     transition: all 1s ease-in-out;
@@ -64,9 +67,14 @@
     text-align: center;
     margin-bottom: 50px;
     font-size: 35px;
-    color: forestgreen;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: black;
+    font-family: 'Chivo', sans-serif;
     letter-spacing: 2px;
+}
+
+.about-container .lines-container .logo {
+    width: 30px;
+    height: 30px;
 }
 
 .about-container .lines-container .line1,

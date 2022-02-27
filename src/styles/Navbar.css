@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
 /* body {
     position: relative;
 } */
 
 nav {
-    padding-left: 50px;
+    padding-left: 150px;
     padding-right: 800px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     position: sticky;
     height: 75px;
     top: 0;
@@ -13,28 +14,52 @@ nav {
 }
 
 .navigation-bar {
-    transition: background-color 1s ease-in-out;
+    transition: box-shadow 1s ease-in-out;
+    background-color: white;
+    /* background-color: rgb(92, 170, 69); */
     /* transition: box-shadow 1s ease-in-out; */
 }
 
 .navigation-bar.active {
-    background-color: rgb(92, 170, 69);
+    /* background-color: rgb(92, 170, 69); */
+    box-shadow: 0 4px 15px -2px gray;
     /* box-shadow: 5px 10px 8px 10px #888888; */
+}
+
+.navigation-links {
+    display: flex;
+    align-items: center;
+    width: 100vw;
 }
 
 .navigation-links ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 35vw;
+    margin-top: 30px;
+    /* border: 1px solid red; */
     /* padding: 20px 100px; */
     /* border: 1px solid red; */
     list-style: none;
-    height: fit-content;
+    height: 50px;
+    /* height: fit-content; */
 }
 
-.navigation-links ul .logo-container img {
-    width: 100px;
-    height: 100px;
+/* .navigation-links .logo-container img {
+    width: 150px;
+    height: 80px;
+    margin-top: 20px;
+    margin-right: 50px;
+} */
+
+.navigation-links .logo-container {
+    width: 170px;
+    height: 50px;
+    /* margin-top: 10px; */
+    margin-right: 50px;
+    /* margin-bottom: 40px; */
+    /* border: 1px solid red; */
 }
 
 .navigation-links a {
@@ -42,23 +67,28 @@ nav {
     text-align: center;
     text-transform: capitalize;
     color: black;
-    font-size: 16px;
-    font-family: "arial";
+    font-size: 18px;
+    font-family: 'Chivo', sans-serif;
+    transition: color 0.5s ease-in-out;
 }
 
-.navigation-bar .divider {
+.navigation-links a:hover {
+    color: rgb(102, 187, 106);
+}
+
+/* .navigation-bar .divider {
     background-color: grey;
     border-radius: 5px;
-}
+} */
 
-.logo {
+/* .logo {
     cursor: pointer;
-}
+} */
 
-.navigation-links ul li .drop-list {
+/* .navigation-links ul li .drop-list {
     display: none;
 }
 
 .navigation-links ul li .drop-list.show {
     display: block;
-}
+} */

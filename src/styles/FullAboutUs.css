@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
 .about-us-section {
     margin-top: 50px;
 }
@@ -6,7 +8,7 @@
     text-align: center;
     font-size: 72px;
     font-weight: bold;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Chivo', sans-serif;
 }
 
 .about-us-section .main-p {
@@ -15,6 +17,7 @@
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 50px;
+    font-family: 'Chivo', sans-serif;
 }
 
 .about-div {
@@ -34,6 +37,7 @@
     font-size: 20px;
     line-height: 2;
     color: gray;
+    font-family: 'Chivo', sans-serif;
 }
 
 .opportunities {
@@ -53,11 +57,12 @@
 
 .opportunities .problems {
     background-color: rgb(89, 194, 89);
+    box-shadow: 4px 4px 15px -2px gray;
 }
 
 .opportunities .solutions {
-    border: 1px solid gray;
-    box-shadow: 10px 10px 8px 10px #888888;
+    border: 1px solid rgb(89, 194, 89);
+    box-shadow: 4px 4px 15px -2px gray;
 }
 
 .opportunities .problems h1, .opportunities .solutions h1 {
@@ -65,7 +70,7 @@
 }
 
 .opportunities .problems h1 {
-    color: aliceblue;
+    color: black;
 }
 
 .opportunities .problems ul, .opportunities .solutions ul {
@@ -78,7 +83,7 @@
 }
 
 .opportunities .problems ul li p {
-    color: aliceblue;
+    color: black;
 }
 
 .opportunities .problems .icon-container, .opportunities .solutions .icon-container {
@@ -157,5 +162,5 @@
 .basket-container {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 10px;
 }

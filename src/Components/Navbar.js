@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/final_logo_1.png";
 import links from "../data/links";
 
 //CSS
@@ -24,10 +24,11 @@ const Navbar = () => {
         // <nav className="navigation-bar active">
         <nav className={`${navbarColor ? "navigation-bar active" : "navigation-bar"}`}>
             <div className="navigation-links">
+                {/* <div className='logo-container'>
+                    
+                </div> */}
+                <img src={Logo} alt='Company' className="logo-container" />
                 <ul>
-                    <div className='logo-container'>
-                        <img src={Logo} alt='Company' />
-                    </div>
                     {
                         links.map((link, index) => {
                             const { page, path } = link;
