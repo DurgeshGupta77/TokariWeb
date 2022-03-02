@@ -60,6 +60,7 @@ nav {
     margin-right: 50px;
     /* margin-bottom: 40px; */
     /* border: 1px solid red; */
+    cursor: pointer;
 }
 
 .navigation-links a {
@@ -70,9 +71,14 @@ nav {
     font-size: 18px;
     font-family: 'Chivo', sans-serif;
     transition: color 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .navigation-links a:hover {
+    color: rgb(102, 187, 106);
+}
+
+.navigation-links ul li>.active {
     color: rgb(102, 187, 106);
 }
 

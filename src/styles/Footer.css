@@ -39,6 +39,7 @@ footer .footer-company ul li a {
 
     font-size: 20px;
     font-family: 'Chivo', sans-serif;
+    cursor: pointer;
 }
 
 .footer-social {

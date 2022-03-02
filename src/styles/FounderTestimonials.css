@@ -1,0 +1,80 @@
+.swiper-container {
+    /* background-color: red; */
+    box-shadow: 4px 4px 15px -2px gray;
+    margin-top: 250px;
+    padding: 50px 30px;
+    /* margin: 20% 0px; */
+    margin: 200px 50px 50px 50px;
+    border-radius: 50px;
+}
+
+.founder-img-container {
+    /* background-color: red; */
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.founder-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 180px;
+}
+
+.founder-name {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.founder-designation {
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.founder-msg {
+    text-align: center;
+    line-height: 2;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.icon-container a {
+    text-decoration: none;
+    font-size: 28px;
+    color: rgb(102, 187, 106);
+}
+
+.swiper-intro {
+    text-align: center;
+    color: rgb(102, 187, 106);
+    font-size: 58px;
+    margin-bottom: 50px;
+}
+
+/* Swiper.js */
+.swiper-button-prev {
+    color: rgb(102, 187, 106);
+    padding: 35px 35px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px -2px rgb(102, 187, 106);
+}
+
+.swiper-button-next {
+    color: rgb(102, 187, 106);
+    padding: 35px 35px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px -2px rgb(102, 187, 106);
+}

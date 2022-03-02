@@ -11,6 +11,10 @@ import Home from "./pages/Home";
 
 //React-Router DOM
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutUs from "./Components/AboutUs";
+import Team from "./Components/Team";
+import ContactUs from "./pages/ContactUs";
+import FounderTestimonials from "./Components/FounderTestimonials";
 
 function App() {
   // const { name } = useGlobalContext();
@@ -22,6 +26,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<FullAboutUs />} />
+          <Route path="/singleAbout" element={<AboutUs />} />
+          <Route path="/people" element={<Team />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/testimonials" element={<FounderTestimonials />} />
           {/* <Route path="*" element={<Error />} /> */}
         </Routes>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaLightbulb, FaTruckLoading } from "react-icons/fa";
 
 //CSS
@@ -11,9 +11,12 @@ import whyus from "../assets/whyus.png";
 //Components
 import Basket from "../Components/Basket";
 
+import { useGlobalContext } from "../context";
+
 const FullAboutUs = () => {
-    const [changeProblemBg, setProblemBg] = useState(false);
-    const [changeSolutionBg, setSolutionBg] = useState(false);
+
+    const { changeProblemBg, changeSolutionBg, setProblemBg, setSolutionBg } = useGlobalContext();
+
     return <React.Fragment>
         <section className="about-us-section">
             <h1 className="main-title">About Us!</h1>

@@ -6,7 +6,7 @@ import '../styles/ImageSlider.css';
 
 const ImageSlider = () => {
     return (
-        <section className="image-slider-container">
+        <section className="image-slider-container" id="home">
             <div className="truck-img">
                 <img src={img} alt='Truck' />
             </div>

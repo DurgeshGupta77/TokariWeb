@@ -21,7 +21,7 @@ const AboutUs = () => {
     }, []);
 
     return <>
-        <section className="about-container">
+        <section className="about-container" id="singleAbout">
             <div className="info-container">
                 <h1>About Us</h1>
                 <p>Ninjacart is India's largest Fresh Produce Supply Chain Company. We are pioneers in solving one of the toughest supply chain problems of the world by leveraging innovative technology. We source fresh produce from farmers and deliver them to businesses within 12 hours.</p>

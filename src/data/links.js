@@ -1,7 +1,7 @@
 const links = [
     {
         page: 'Home',
-        path: '/',
+        path: 'home',
         sublinks: [
             { label: 'Drop down 1', url: '/' },
             { label: 'Drop down 2', url: '/' },
@@ -10,7 +10,7 @@ const links = [
     },
     {
         page: 'About Us',
-        path: '/',
+        path: 'singleAbout',
         sublinks: [
             { label: 'Drop down 1', url: '/' },
             { label: 'Drop down 2', url: '/' },
@@ -18,21 +18,17 @@ const links = [
         ],
     },
     {
-        page: 'Store',
-        path: '/',
-    },
-    {
-        page: 'Page',
-        path: '/'
-    },
-    {
-        page: 'Blog',
-        path: '/',
+        page: 'People',
+        path: 'people',
     },
     {
         page: 'Contact Us',
-        path: '/'
-    }
+        path: 'contact'
+    },
+    {
+        page: 'Testimonials',
+        path: 'testimonials'
+    },
 ];
 
 export default links;

@@ -17,7 +17,7 @@ const Team = () => {
         Aos.init({});
     }, []);
     return (
-        <div className="main-container">
+        <div className="main-container" id="people">
             <h1>
                 Meet Our Team <br />
                 <span> Vision to change Industry </span>

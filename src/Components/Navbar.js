@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../assets/final_logo_1.png";
 import links from "../data/links";
+
+import { Link as ScrollLink } from "react-scroll";
+// import { NavHashLink as Link } from "react-router-hash-link";
 
 //CSS
 import '../styles/Navbar.css';
 
+import { useGlobalContext } from "../context";
+
 
 const Navbar = () => {
-    const [navbarColor, setNavbarColor] = useState(false);
+    const { navbarColor, setNavbarColor } = useGlobalContext();
+
 
     const changeBackgroundColor = () => {
         if (window.scrollY >= 80) {
@@ -27,14 +33,24 @@ const Navbar = () => {
                 {/* <div className='logo-container'>
                     
                 </div> */}
-                <img src={Logo} alt='Company' className="logo-container" />
+                <ScrollLink to='home' spy={true} activeClass="active" offset={-200} duration={1500} smooth={true}><img src={Logo} alt='Company' className="logo-container" /></ScrollLink>
                 <ul>
                     {
                         links.map((link, index) => {
                             const { page, path } = link;
                             return (
                                 <li key={index}>
-                                    <a href={path}>{page}</a>
+                                    {/* <Link to={path}>{page}</Link> */}
+                                    <ScrollLink to={path} spy={true} activeClass="active" offset={-200} duration={1500} smooth={true}>{page}</ScrollLink>
+                                    {/* <Link
+                                        to={path}
+                                        activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                    >
+                                        {page}
+                                    </Link> */}
+                                    {/* <a href={path}>{page}</a> */}
                                 </li>
                             );
                         })

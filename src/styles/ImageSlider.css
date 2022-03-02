@@ -1,7 +1,7 @@
 .image-slider-container {
     /* background-image: url(../assets/isb.png); */
     position: relative;
-    width: 100vw;
+    width: 95vw;
     height: 85vh;
     /* border: 1px solid red;d */
     /* padding: 0px 250px; */
@@ -33,9 +33,9 @@
 }
 
 .image-slider-container .truck-img img {
-    margin-top: 100px;
-    width: 900px;
-    height: 300px;
+    margin-top: 90px;
+    width: 950px;
+    height: 340px;
     position: absolute;
     top: 100px;
     left: 25px;
