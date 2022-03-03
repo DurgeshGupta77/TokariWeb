@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 //Pages
 import FullAboutUs from "./pages/FullAboutUs";
 import Home from "./pages/Home";
+import Error from "./pages/Error";
 
 //React-Router DOM
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -30,7 +31,7 @@ function App() {
           <Route path="/people" element={<Team />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/testimonials" element={<FounderTestimonials />} />
-          {/* <Route path="*" element={<Error />} /> */}
+          <Route path="*" element={<Error />} />
         </Routes>
 
         <Footer />

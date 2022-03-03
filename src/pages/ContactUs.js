@@ -3,6 +3,9 @@ import { useGlobalContext } from "../context";
 import { AiFillWarning } from "react-icons/ai";
 import { FaCheckSquare } from "react-icons/fa";
 
+//Form.js
+import emailjs from '@emailjs/browser';
+
 import "../styles/ContactUs.css";
 
 const ContactUs = () => {
@@ -30,14 +33,26 @@ const ContactUs = () => {
             }, 3000)
         }
 
-        setError(false);
-        setSuccess(true);
-        setMessage('Thank you for connecting with us!');
+        emailjs.sendForm('service_ez1avos', 'template_vp468ne', e.target, 'zN5jXGUEm7FuTKBou')
+            .then((result) => {
+                // console.log(result.text);
+                setError(false);
+                setSuccess(true);
+                setMessage('Thank you for connecting with us! We have recieved your mail and will connect with you as soon as possible');
 
-        setTimeout(() => {
-            setSuccess(false);
-            setMessage('');
-        }, 3000)
+                setTimeout(() => {
+                    setSuccess(false);
+                    setMessage('');
+                }, 3000)
+            }, (error) => {
+                // console.log(error.text);
+                setError(true);
+                setMessage('Oops! Some Error occoured! Please try again later!');
+                setTimeout(() => {
+                    setError(false);
+                    setMessage('');
+                }, 3000)
+            });
 
     }
 
