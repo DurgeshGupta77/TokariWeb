@@ -17,11 +17,14 @@ const AppProvider = ({ children }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [address, setAddress] = useState('');
-    const [error, setError] = useState(false);
+    const [messageField, setMessageField] = useState('');
+    //Success Message and Error Message
     const [message, setMessage] = useState('');
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    return <AppContext.Provider value={{ isDropDownDisplay, setIsDropDownDisplay, navbarColor, setNavbarColor, changeProblemBg, changeSolutionBg, setProblemBg, setSolutionBg, name, setName, phoneNumber, setPhoneNumber, address, setAddress, error, setError, message, setMessage, success, setSuccess }}>
+    return <AppContext.Provider value={{ isDropDownDisplay, setIsDropDownDisplay, navbarColor, setNavbarColor, changeProblemBg, changeSolutionBg, setProblemBg, setSolutionBg, name, setName, phoneNumber, setPhoneNumber, address, setAddress, messageField, setMessageField, error, setError, message, setMessage, success, setSuccess, loading, setLoading }}>
         {children}
     </AppContext.Provider>
 }

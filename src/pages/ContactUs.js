@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 import { AiFillWarning } from "react-icons/ai";
-import { FaCheckSquare } from "react-icons/fa";
+import { FaCheckSquare, FaMailBulk } from "react-icons/fa";
 
 //Form.js
 import emailjs from '@emailjs/browser';
@@ -9,50 +9,54 @@ import emailjs from '@emailjs/browser';
 import "../styles/ContactUs.css";
 
 const ContactUs = () => {
-    const { name, setName, phoneNumber, setPhoneNumber, address, setAddress, error, setError, message, setMessage, success, setSuccess } = useGlobalContext();
+    const { name, setName, phoneNumber, setPhoneNumber, address, setAddress, error, setError, message, setMessage, success, setSuccess, messageField, setMessageField, loading, setLoading } = useGlobalContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form Submitted");
+        setLoading(true);
 
         if (!name) {
             setError(true);
+            setLoading(false);
             setMessage('Name Field Empty. Please fill the name field to proceed');
             setTimeout(() => {
                 setError(false);
                 setMessage('');
             }, 3000)
         }
-
-        if (phoneNumber.length < 10 || phoneNumber.length > 10) {
+        else if (phoneNumber.length < 10 || phoneNumber.length > 10) {
             setError(true);
+            setLoading(false);
             setMessage('Invalid Phone Number Length. Please Check the length of Phone Number once again!');
             setTimeout(() => {
                 setError(false);
                 setMessage('');
             }, 3000)
         }
-
-        emailjs.sendForm('service_ez1avos', 'template_vp468ne', e.target, 'zN5jXGUEm7FuTKBou')
-            .then((result) => {
-                // console.log(result.text);
-                setError(false);
-                setSuccess(true);
-                setMessage('Thank you for connecting with us! We have recieved your mail and will connect with you as soon as possible');
-
-                setTimeout(() => {
-                    setSuccess(false);
-                    setMessage('');
-                }, 3000)
-            }, (error) => {
-                // console.log(error.text);
-                setError(true);
-                setMessage('Oops! Some Error occoured! Please try again later!');
-                setTimeout(() => {
+        else {
+            emailjs.sendForm('service_ez1avos', 'template_vp468ne', e.target, 'zN5jXGUEm7FuTKBou')
+                .then((result) => {
+                    // console.log(result.text);
                     setError(false);
-                    setMessage('');
-                }, 3000)
-            });
+                    setSuccess(true);
+                    setMessage('Thank you for connecting with us! We have recieved your mail and will connect with you as soon as possible');
+                    setLoading(false);
+                    setTimeout(() => {
+                        setSuccess(false);
+                        setMessage('');
+                    }, 3000)
+                }, (error) => {
+                    // console.log(error.text);
+                    setError(true);
+                    setMessage('Oops! Some Error occoured! Please try again later!');
+                    setLoading(false);
+                    setTimeout(() => {
+                        setError(false);
+                        setMessage('');
+                    }, 3000)
+                });
+        }
 
     }
 
@@ -98,13 +102,32 @@ const ContactUs = () => {
                             <input type="number" id="phoneNumber" name="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} autoComplete="off" maxLength={10} onInput={maxLengthCheck} placeholder="Enter your Mobile Number" className="number-field" />
                         </div>
                     </div>
-                    <div className="controlled-form">
+                    {/* <div className="controlled-form">
                         <div className="form-label">
                             <label htmlFor="address">Address: </label>
                         </div>
                         <input type="text" id="address" name="address" value={address} onChange={(e) => setAddress(e.target.value)} autoComplete="off" placeholder="Enter your Address" />
+                    </div> */}
+                    <div className="controlled-form">
+                        <div className="form-label">
+                            <label htmlFor="address">Email Address: (Optional) </label>
+                        </div>
+                        <input type="email" id="address" name="address" value={address} onChange={(e) => setAddress(e.target.value)} autoComplete="off" placeholder="Enter your Email ID:" />
                     </div>
-                    <button type="submit">Connect with Tokari!</button>
+                    <div className="controlled-form">
+                        <div className="form-label">
+                            <label htmlFor="message">Message: (Optional) </label>
+                        </div>
+                        <textarea id="message" name="message" rows={4} cols={100} value={messageField} onChange={(e) => setMessageField(e.target.value)} autoComplete="off" placeholder="Enter your Message" />
+                    </div>
+                    {/* {`${loading ? <h1>Please wait sending your mail....</h1> : <button type="submit">Connect with Tokari!</button>}`} */}
+                    {!loading && <button type="submit">Connect with Tokari!</button>}
+                    {loading &&
+                        <div className="sending-mail-container">
+                            <h1>Please wait.....Delivering your mail!!</h1>
+                            {/* <FaMailBulk className="mail-icon" /> */}
+                        </div>
+                    }
                 </form>
             </div>
         </section>

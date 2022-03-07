@@ -31,7 +31,7 @@
     font-weight: bold;
 }
 
-.form-section .form-div .contact-form .controlled-form input {
+.form-section .form-div .contact-form .controlled-form input, .form-section .form-div .contact-form .controlled-form textarea {
     padding: 20px 30px;
     width: 97%;
     margin-bottom: 20px;
@@ -41,7 +41,7 @@
     transition: background-color 0.5s ease-in-out;
 }
 
-.form-section .form-div .contact-form .controlled-form input:focus {
+.form-section .form-div .contact-form .controlled-form input:focus, .form-section .form-div .contact-form .controlled-form textarea:focus {
     background-color: rgba(102, 187, 106, 0.5);
     /* color: white; */
     border: none;
@@ -126,3 +126,41 @@
 .success .icon {
     visibility: hidden;
 }
+
+.sending-mail-container {
+    position: relative;
+    /* border: 1px solid green; */
+}
+
+/* .sending-mail-container .mail-icon {
+    color: rgb(15, 145, 15);
+    font-size: 32px; */
+/* position: absolute; */
+/* -webkit-animation: myOrbit 4s infinite alternate-reverse;
+    animation: myOrbit 4s infinite alternate-reverse;
+} */
+
+/* @keyframes myOrbit {
+    0% {
+        transform: translateX(5px)
+    }
+
+    20% {
+        transform: translateX(5px) translateY(20px)
+    }
+
+    40% {
+        transform: translateX(20px) translateY(0px)
+    }
+
+    60% {
+        transform: translateX(50px) translateY(52px)
+    }
+
+    80% {
+        transform: translateX(150px) translateY(50px)
+    }
+    100%{
+
+    }
+} */
